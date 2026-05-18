@@ -22,7 +22,7 @@ const HeroBanner = () => {
                     </h1>
 
                     <p className="text-green-200 text-lg leading-relaxed max-w-md">
-                        Connect with top-rated specialists, choose your preferred time, and get the care you deserve — all from one platform.
+                        Connect with top-rated specialists, choose your preferred time, and get the care you deserve  all from one platform.
                     </p>
 
                     <ul className="space-y-3 text-green-100 text-sm">
