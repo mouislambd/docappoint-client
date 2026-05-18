@@ -1,4 +1,5 @@
 import { FiShield, FiClock, FiPhone, FiAward } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 const ExtraSections = () => {
     return (
@@ -46,11 +47,11 @@ const ExtraSections = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                         {[
-                            { step: '01', title: 'Find a Doctor', desc: 'Browse through our list of verified specialists and find the right doctor for your needs.' },
-                            { step: '02', title: 'Book Appointment', desc: 'Select your preferred date and time slot that works best for your schedule.' },
-                            { step: '03', title: 'Get Consultation', desc: 'Visit the doctor at the scheduled time and get the care you deserve.' },
+                            { step: '01', title: 'Find a Doctor', desc: 'Browse through our list of verified specialists and find the right doctor for your needs.', link: '/appointments' },
+                            { step: '02', title: 'Book Appointment', desc: 'Select your preferred date and time slot that works best for your schedule.', link: '/appointments' },
+                            { step: '03', title: 'Get Consultation', desc: 'Visit the doctor at the scheduled time and get the care you deserve.', link: '/dashboard/my-bookings' },
                         ].map((item, i) => (
-                            <div key={i} className="relative bg-green-800/50 border border-green-700 rounded-2xl p-8 text-center">
+                            <Link to={item.link} key={i} className="relative bg-green-800/50 border border-green-700 rounded-2xl p-8 text-center hover:bg-green-700/50 transition-all duration-300 block">
                                 <span className="text-6xl font-black text-green-700 absolute top-4 right-6 select-none">
                                     {item.step}
                                 </span>
@@ -59,7 +60,7 @@ const ExtraSections = () => {
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                                 <p className="text-green-200 text-sm leading-relaxed">{item.desc}</p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

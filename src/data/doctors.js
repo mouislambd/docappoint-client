@@ -14,7 +14,7 @@ export const doctors = [
     },
     {
         _id: "d2",
-        name: "Dr. Karim Hossain",
+        name: "Dr.Abdul Karim Hossain",
         specialty: "Neurologist",
         image: "https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg",
         experience: "12 years",

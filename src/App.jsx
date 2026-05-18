@@ -11,9 +11,11 @@ function App() {
                 <Outlet />
             </main>
             <Footer />
-            <Toaster position="top-right" />
+            <Toaster position="top-right" /> 
         </div>
-    )
-}
+  
+)
+} 
 
-export default App
+
+export default App 
