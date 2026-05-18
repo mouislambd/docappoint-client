@@ -25,7 +25,7 @@ const slides = [
         title: 'Your Health Data Is Safe With Us',
         highlight: 'Safe',
         desc: 'We use industry-standard encryption to protect your personal health information. Your privacy is our priority.',
-        image: 'https://img.freepik.com/free-photo/doctor-with-stethoscope_144627-43876.jpg'
+        image:'https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg'
     }
 ]
 
