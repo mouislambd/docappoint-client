@@ -84,15 +84,16 @@ const HeroBanner = () => {
                                         <div className="w-full h-64 bg-gradient-to-br from-green-700 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
                                             <img src={slide.image} alt="Doctor" className="w-full h-full object-cover rounded-2xl" />
                                         </div>
-                                        <div className="grid grid-cols-3 gap-4 text-center">
+                                        <div className="grid grid-cols-3 gap-2 text-center">
                                             {[
                                                 { number: '500+', label: 'Appointments' },
                                                 { number: '100+', label: 'Doctors' },
                                                 { number: '4.9★', label: 'Rating' },
                                             ].map(stat => (
                                                 <div key={stat.label} className="bg-green-700/40 rounded-xl p-3">
-                                                    <p className="text-green-300 font-bold text-lg">{stat.number}</p>
-                                                    <p className="text-green-400 text-xs">{stat.label}</p>
+                                                    <p className="text-green-300 font-bold text-sm">{stat.number}</p>
+                                                    <p className="text-green-400 text-xs truncate">{stat.label}</p>
+                                                    
                                                 </div>
                                             ))}
                                         </div>
