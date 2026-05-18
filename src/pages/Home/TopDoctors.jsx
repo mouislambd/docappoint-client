@@ -10,15 +10,12 @@ const TopDoctors = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axiosInstance.get('/api/doctors/top-rated')
-            .then(res => {
-                const data = Array.isArray(res.data) ? res.data : []
-                setDoctors(data)
-            })
+        fetch('https://docappoint-server-d42e.onrender.com/api/doctors/top-rated')
+            .then(res => res.json())
+            .then(data => setDoctors(Array.isArray(data) ? data : []))
             .catch(err => console.error(err))
             .finally(() => setLoading(false))
-    }, [])
-
+    }, []) 
     if (loading) return (
         <section className="py-20 bg-gray-50">
             <div className="flex justify-center items-center h-40">
