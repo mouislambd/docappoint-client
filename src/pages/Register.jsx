@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { auth } from '../lib/firebase'
@@ -11,6 +11,10 @@ const Register = () => {
     const [form, setForm] = useState({ name: '', email: '', photoURL: '', password: '' })
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        document.title = 'Register | DocAppoint'
+    }, [])
 
     const handleChange = e => { setForm({ ...form, [e.target.name]: e.target.value }); setError('') }
 

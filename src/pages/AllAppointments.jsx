@@ -10,6 +10,7 @@ const AllAppointments = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        document.title = 'All Appointments | DocAppoint'
         fetch('https://docappoint-server-d42e.onrender.com/api/doctors')
             .then(res => res.json())
             .then(data => setDoctors(Array.isArray(data) ? data : []))

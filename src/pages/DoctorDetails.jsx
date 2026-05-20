@@ -14,6 +14,7 @@ const DoctorDetails = () => {
     const [booking, setBooking] = useState(false)
 
     useEffect(() => {
+        document.title = 'Doctor Details | DocAppoint'
         fetch(`https://docappoint-server-d42e.onrender.com/api/doctors/${id}`)
             .then(res => res.json())
             .then(data => setDoctor(data))
